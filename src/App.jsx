@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import { FaMoneyBillWave, FaList, FaBars, FaTimes, FiLinkedin } from 'react-icons/fa';
+import { FaMoneyBillWave, FaList, FaBars, FaTimes, FaLinkedin } from 'react-icons/fa';
 import Create from './components/create';
 import List from './components/list';
 import Edit from './components/edit';
