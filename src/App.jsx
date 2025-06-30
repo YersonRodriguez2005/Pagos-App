@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import { FaMoneyBillWave, FaList, FaBars, FaTimes } from 'react-icons/fa';
+import { FaMoneyBillWave, FaList, FaBars, FaTimes, FiLinkedin } from 'react-icons/fa';
 import Create from './components/create';
 import List from './components/list';
 import Edit from './components/edit';
@@ -114,19 +114,37 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-16">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-gray-600 text-sm">
-              © 2025 PagosApp. Todos los derechos reservados.
-            </p>
-            <div className="flex items-center gap-2 text-green-600">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">Sistema Activo</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+<footer className="bg-white border-t border-gray-200 mt-16">
+  <div className="container mx-auto px-4 py-6">
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+      
+      {/* Derechos reservados */}
+      <p className="text-gray-600 text-sm text-center sm:text-left">
+        © 2025 <span className="font-semibold">PagosApp</span>. Todos los derechos reservados.
+      </p>
+
+      {/* Autor con LinkedIn */}
+      <div className="flex items-center gap-2 text-sm text-gray-700">
+        <span>Desarrollado por:</span>
+        <a 
+          href="https://www.linkedin.com/in/yerson-rodriguez/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition"
+        >
+          <FiLinkedin className="w-5 h-5" />
+          <span className="underline">Yerson Rodriguez</span>
+        </a>
+      </div>
+
+      {/* Indicador de estado */}
+      <div className="flex items-center gap-2 text-green-600">
+        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <span className="text-sm font-medium">Sistema Activo</span>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
